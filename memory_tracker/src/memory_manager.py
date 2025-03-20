@@ -8,3 +8,6 @@ class MemoryManager:
 
     def free_memory(self, process):
         raise NotImplementedError
+
+    def testing():
+        print("Inside gui")
