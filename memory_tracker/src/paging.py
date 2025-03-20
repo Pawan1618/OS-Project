@@ -28,3 +28,4 @@ class PagingMemoryManager(MemoryManager):
             if self.pages[i] == process.pid:
                 self.pages[i] = None
         self.used_memory -= process.size
+ 
