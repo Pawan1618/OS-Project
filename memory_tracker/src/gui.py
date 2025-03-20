@@ -23,3 +23,13 @@ def draw_memory_grid(self, num_blocks=16):
         self.canvas.create_rectangle(x1, y1, x2, y2, fill="gray", outline="black")
         
     self.canvas.update()
+
+def create_controls(self):
+    control_frame = tk.Frame(self)
+    control_frame.pack(side=tk.BOTTOM, fill=tk.X)
+
+    tk.Button(control_frame, text="Allocate Process", command=self.allocate_process).pack(side=tk.LEFT, padx=10)
+    tk.Button(control_frame, text="Free Process", command=self.free_process).pack(side=tk.LEFT, padx=10)
+    
+    self.mode_var = tk.StringVar(value="Paging")
+    tk.OptionMenu(control_frame, self.mode_var, "Paging", "Segmentation", command=self.toggle_mode).pack(side=tk.RIGHT, padx=10)
