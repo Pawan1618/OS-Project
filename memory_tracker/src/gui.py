@@ -53,3 +53,14 @@ def free_process(self):
 def toggle_mode(self, mode):
     self.memory_manager = PagingMemoryManager(1024, 64) if mode == "Paging" else SegmentationMemoryManager(1024)
     self.draw_memory_grid()
+
+import threading
+import time
+
+def update_memory(self):
+    while True:
+        self.draw_memory_grid()
+        time.sleep(1)
+
+def start_real_time_updates(self):
+    threading.Thread(target=self.update_memory, daemon=True).start()
