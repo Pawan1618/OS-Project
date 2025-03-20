@@ -64,3 +64,9 @@ def update_memory(self):
 
 def start_real_time_updates(self):
     threading.Thread(target=self.update_memory, daemon=True).start()
+
+def draw_memory_grid(self):
+    self.canvas.delete("all")
+    for i, page in enumerate(self.memory_manager.pages):
+        color = "green" if page is not None else "gray"
+        self.canvas.create_rectangle(i * 50, 0, (i + 1) * 50, 50, fill=color, outline="black")
