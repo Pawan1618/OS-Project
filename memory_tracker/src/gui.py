@@ -33,3 +33,23 @@ def create_controls(self):
     
     self.mode_var = tk.StringVar(value="Paging")
     tk.OptionMenu(control_frame, self.mode_var, "Paging", "Segmentation", command=self.toggle_mode).pack(side=tk.RIGHT, padx=10)
+
+from paging import PagingMemoryManager
+from segmentation import SegmentationMemoryManager
+from process import Process
+
+def allocate_process(self):
+    process = Process(pid=len(self.memory_manager.pages) + 1, size=64)
+    success = self.memory_manager.allocate_memory(process)
+    if success:
+        self.draw_memory_grid()
+
+def free_process(self):
+    if self.memory_manager.pages:
+        process_id = self.memory_manager.pages[-1]
+        self.memory_manager.free_memory(process_id)
+        self.draw_memory_grid()
+
+def toggle_mode(self, mode):
+    self.memory_manager = PagingMemoryManager(1024, 64) if mode == "Paging" else SegmentationMemoryManager(1024)
+    self.draw_memory_grid()
