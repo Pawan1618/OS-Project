@@ -1,8 +1,5 @@
-import logging
+import datetime
 
-logging.basicConfig(filename="logs/memory_log.txt", level=logging.INFO,
-                    format="%(asctime)s - %(message)s", filemode="w")
-
-
-def log_memory_event(event):
-    logging.info(event)
+def log_memory_action(action, process):
+    with open("../logs/memory_log.txt", "a") as file:
+        file.write(f"{datetime.datetime.now()} - {action}: {process}\n")
