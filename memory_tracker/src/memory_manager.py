@@ -1,5 +1,5 @@
 class MemoryManager:
-    def __init__(self, total_memory):
+    def _init_(self, total_memory):
         self.total_memory = total_memory
         self.used_memory = 0
 
