@@ -1,14 +1,13 @@
-from logger import log_memory_event
+class MemoryManager:
+    def _init_(self, total_memory):
+        self.total_memory = total_memory
+        self.used_memory = 0
 
+    def allocate_memory(self, process):
+        raise NotImplementedError
 
-def allocate_memory(self, process):
-    success = self._allocate(process)
-    if success:
-        log_memory_event(
-            f"Allocated Process {process.pid} with size {process.size}")
-    return success
+    def free_memory(self, process):
+        raise NotImplementedError
 
-
-def free_memory(self, process_id):
-    self._free(process_id)
-    log_memory_event(f"Freed memory of Process {process_id}")
+    def testing():
+        print("Inside gui")
