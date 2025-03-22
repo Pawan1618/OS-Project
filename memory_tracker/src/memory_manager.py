@@ -6,6 +6,7 @@ class MemoryManager:
     def allocate_memory(self, process):
         raise NotImplementedError
 
+
     def free_memory(self, process):
         raise NotImplementedError
 
