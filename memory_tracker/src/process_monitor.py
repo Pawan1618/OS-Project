@@ -7,7 +7,7 @@ import time
 class ProcessListView:
     def __init__(self, parent):
         self.parent = parent
-        self.max_processes = 20  # Limit to 20 processes
+        self.max_processes = 50  # Limit to 20 processes
         self.setup_gui()
         
     def setup_gui(self):
