@@ -1,86 +1,49 @@
-# os project 
-1. Project Overview
-Goals
-Develop a real-time visualization tool to track memory allocation.
-Simulate paging and segmentation memory management techniques.
-Provide an interactive GUI to monitor memory usage dynamically.
-Expected Outcomes
-A working tool that displays memory allocation and deallocation in real-time.
-Ability to toggle between paging and segmentation views.
-Efficient simulation of memory fragmentation and process execution.
-Scope
-Core Scope: Visualization of memory allocation in real-time.
-Extended Scope (if time permits): Integration with an OS simulator or real process tracking.
-2. Module-Wise Breakdown
-The project can be divided into three key modules:
+# Memory Allocation Visualizer
 
-1. Memory Simulation Engine
-Simulates memory allocation, paging, and segmentation.
-Handles process creation, execution, and termination.
-Maintains memory tables (Page Tables, Segment Tables).
-2. GUI for Visualization
-Displays real-time memory allocation.
-Allows toggling between paging and segmentation views.
-Uses color coding to differentiate process memory blocks.
-3. Data Logging & Analysis
-Logs memory allocation/deallocation events.
-Provides insights like fragmentation percentage, memory usage trends.
-3. Functionalities
-Memory Simulation Engine
-✅ Paging Mode
+A comprehensive tool for visualizing memory allocation strategies and monitoring system resources in real-time.
 
-Divides memory into fixed-size pages.
-Maintains page tables for each process.
-Displays page allocation in frames.
-✅ Segmentation Mode
+![Application Screenshot](screenshot.png) <!-- Add actual screenshot later -->
 
-Divides memory into variable-sized segments.
-Uses segment tables for mapping.
-Simulates external fragmentation.
-✅ Process Management
+## Features
 
-Creates and removes processes dynamically.
-Allocates and frees memory in real-time.
-GUI for Visualization
-✅ Memory Representation
+- **Memory Allocation Simulation**
+  - First-fit, Best-fit, and Worst-fit allocation strategies
+  - Visual representation of memory blocks
+  - Real-time fragmentation statistics
+  - Page/Segment view toggle
 
-Grid-based memory view for paging.
-Block-based memory view for segmentation.
-✅ User Interaction
+- **System Resource Monitoring**
+  - Real-time memory usage graph
+  - CPU utilization tracking
+  - Swap memory statistics
+  - Historical data visualization
 
-Toggle between paging and segmentation views.
-Highlight specific processes in memory.
-✅ Color Coding
+- **Process Management**
+  - Live process list (unsorted)
+  - Memory and CPU usage per process
+  - Auto-refreshing data
 
-Different colors for used, free, and fragmented memory.
-Data Logging & Analysis
-✅ Logging
+- **Advanced Visualization**
+  - Matplotlib integration for professional charts
+  - Qt5-based GUI with tabbed interface
+  - Color-coded memory blocks
 
-Logs memory allocation events with timestamps.
-✅ Analytics
+## Installation
 
-Displays memory usage statistics.
-Graphs fragmentation over time.
-4. Technology Recommendations
-Component	Recommended Tools
-Language	Python, Java, C++
-GUI Library	Tkinter (Python), PyQt, JavaFX
-Visualization	Matplotlib, Seaborn, Plotly
-Simulation	Python’s simpy, C++ STL for memory management
-Database (Optional)	SQLite, JSON for logging
-5. Execution Plan
-Step 1: Design the Memory Model
-Define data structures for pages, frames, and segments.
-Implement process allocation algorithms.
-Step 2: Implement Memory Simulation Engine
-Create memory allocation methods (paging & segmentation).
-Implement memory deallocation logic.
-Step 3: Build the GUI
-Develop basic UI with Tkinter/PyQt.
-Implement a real-time memory visualization panel.
-Step 4: Integrate Data Logging
-Log memory operations to a database or file.
-Implement real-time memory analytics.
-Step 5: Optimize & Debug
-Ensure efficient memory allocation.
-Improve real-time updates and UI responsiveness.
+### Prerequisites
+- Python 3.8+
+- pip package manager
+
+### Setup
+```bash
+# Clone repository
+git clone https://github.com/yourusername/memory-visualizer.git
+cd memory-visualizer
+
+# Create virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate  # Linux/MacOS
+venv\Scripts\activate  # Windows
+
+# Install dependencies
+pip install -r requirements.txt
