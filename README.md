@@ -2,7 +2,7 @@
 
 A comprehensive tool for visualizing memory allocation strategies and monitoring system resources in real-time.
 
-![Application Screenshot](C:\Users\pawan\final-OS\OS-Project\Screenshot 2025-03-27 204253.png) <!-- Add actual screenshot later -->
+![Application Screenshot](https://github.com/Pawan1618/OS-Project/blob/main/Screenshot%202025-03-27%20204253.png) <!-- Add actual screenshot later -->
 
 ## Features
 
@@ -37,8 +37,8 @@ A comprehensive tool for visualizing memory allocation strategies and monitoring
 ### Setup
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/memory-visualizer.git
-cd memory-visualizer
+git clone https://github.com/Pawan1618/OS-Project.git
+cd OS-Project
 
 # Create virtual environment (recommended)
 python -m venv venv
