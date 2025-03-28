@@ -2,7 +2,7 @@
 
 A comprehensive tool for visualizing memory allocation strategies and monitoring system resources in real-time.
 
-![Application Screenshot](screenshot.png) <!-- Add actual screenshot later -->
+![Application Screenshot](C:\Users\pawan\final-OS\OS-Project\Screenshot 2025-03-27 204253.png) <!-- Add actual screenshot later -->
 
 ## Features
 
